@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="icon" type="image/png" href="src/img/favicon.png">
+    <title>BankCard Form</title>
+</head>
+<body class="body">
+    <div class="body__form form">
+        <div class="form__card">
+            <img src="src/img/bank-logo.svg" alt="bank__logo" class="form__card-logo" >
+            <div class="form__card-num">
+                #### #### #### ####
+            </div>
+            <div class="form__card-row">
+                <div class="form__card-column">
+                    <div class="form__title form__title-small">
+                        Expires
+                    </div>
+                    <div class="form__text form__title-small">
+                        MM / YY
+                    </div>
+                </div>
+                <div class="form__card-column">
+                    <div class="form__title form__title-small">
+                        CVV
+                    </div>
+                    <div class="form__text form__title-small">
+                        ***
+                    </div>
+                </div>
+            </div>
+            <div class="form__card-row">
+                <div class="form__card-column form__card-column-medium">
+                    <div class="form__title form__title-small">
+                        Card Holder
+                    </div>
+                    <div class="form__text form__title-small">
+                        Full name
+                    </div>
+                </div>
+                <div class="form__card-column">
+                    <div class="form__card-type-bg">
+                        <img src="src/img/none.svg" alt="" class="form__card-type">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form__input">
+            <div class="form__number">
+                <div class="form__title">
+                    Card Number
+                </div>
+                <input type="text" class="form__field form__field-large" placeholder="#### #### #### ####" maxlength="19">
+            </div>
+            <div class="form__holder">
+                <div class="form__title">
+                    Card Holder
+                </div>
+                <input type="text" class="form__field form__field-large" placeholder="Full name">
+            </div>
+            <div class="form__data">
+                <div class="form__period">
+                    <div class="form__title">
+                        Expires
+                    </div>
+                    <div class="form__month-year">
+                        <input type="text" class="form__field form__field-extra-small" placeholder="Month" maxlength="2">
+                        <input type="text" class="form__field form__field-extra-small" placeholder="Year" maxlength="2">
+                    </div>                  
+                </div>
+                <div class="form__cvv">
+                    <div class="form__title">
+                        CVV
+                    </div>
+                    <input type="text" class="form__field form__field-large" placeholder="CVV" maxlength="3">
+                </div>
+            </div>
+            <input type="button" value="Continue" class="form__button">
+        </div>
+    </div>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width:100%;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    height:100%;
+    width:100%;
+    background: #FFC7C7;
+    &__form{
+        margin: 0 auto;
+        padding: 30px 0 0;
+        max-width: 568px;
+    }
+}
+
+.form {
+    &__card{
+        padding: 16px;
+        position: relative;
+        z-index: 2;
+        width: 430px;
+        height: 270px;
+        margin: 0 auto -135px;
+        background: linear-gradient(180deg, #514EFF 0%, rgba(245, 4, 15, 0.599925) 100%);
+        border-radius: 30px;
+        color: white;
+        &-logo {
+            width: 64px;
+            height: 64px;
+        }
+        &-num {
+            color: white;
+            margin: 18px 0 0;
+            text-align: center;
+            font-size: 1.75rem;
+            letter-spacing: 1.6px;
+        }
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 12px 10px 0;
+        }
+        &-type-bg {
+            width: 100px;
+            height: 45px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-type {
+            width: 90px;
+            height: 35px;
+        }
+        &-column{
+            overflow-x: hidden;
+            &-medium {
+                flex: 0 0 70%;
+            }
+        }
+    }
+    &__text {
+        max-width: 300px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-transform: uppercase;
+    }
+    &__input {
+        color: #616161;
+        background: #fff;
+        border-radius: 30px;
+        padding: 200px 29px 20px;
+    }
+    &__title {
+        margin: 0 0 7px 0;
+    }
+    &__field {
+        font-size: 1rem;
+        padding: 10px 12px;
+        margin: 0 0 26px;
+        border: 0.4px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        color: #616161;
+    }
+    &__field::placeholder {
+        opacity: 0.5;
+    }
+    &__field-large {
+        width: 100%;
+    }
+    &__field-extra-small {
+        width: 50%;
+    }
+    &__field-extra-small:last-child {
+        margin-left: 10px;
+    }
+    &__data {
+        display: flex;
+    }
+    &__month-year {
+        flex: 0 0 25%;
+        display: flex;
+    }
+    &__cvv {
+        margin-left: 10px;
+    }
+    &__button {
+        color: white;
+        background: linear-gradient(90deg, #FB3DFF 0%, #F8B2F1 0.01%, rgba(255, 0, 0, 0.58) 100%);
+        border: 0.4px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        font-size: 1rem;
+        padding: 9px 28px;
+        margin: 19px 0 0 0;
+        cursor: pointer;
+    }
+    &__button:hover {
+        background: linear-gradient(90deg, #2CB121 0%, #BEED99 0.01%, rgba(52, 135, 66, 0.58) 100%);
+    }
+    &__button:active {
+        position: relative;
+        top: 3px;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    html {
+        font-size: 14px;
+    }
+    .form {
+        &__card {
+            width: calc(230px * (430 / 270));
+            height: 230px;
+            margin: 0 auto -115px;
+            padding: 10px;
+            border-radius: 20px;
+            &-logo {
+                width: 48px;
+                height: 48px;
+            }
+            &-num {
+                font-size: 1.6rem;
+            }
+            &-type-bg {
+                width: calc(40px * (100 / 45));
+                height: 40px;
+                border-radius: 8px;
+            }
+            &-type {
+                width: calc(32px * (90 / 35));
+                height: 32px;
+            }
+        }
+        &__input {
+            border-radius: 20px;
+            padding: 150px 20px 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .form {
+        &__card {
+            border-radius: 15px;
+            width: calc(175px * (430 / 270));
+            height: 175px;
+            margin: 0 auto -87.5px;
+            &-logo {
+                width: 36px;
+                height: 36px;
+            }
+            &-num {
+                margin: 5px 0 0;
+                font-size: 1.3rem;
+                letter-spacing: 1.5px;
+            }
+            &-row {
+                margin: 7px 10px 0;
+            }
+            &-type-bg {
+                width: calc(30px * (100 / 45));
+                height: 30px;
+                border-radius: 5px;
+            }
+            &-type {
+                width: calc(25px * (90 / 35));
+                height: 25px;
+            }
+        }
+        &__input {
+            border-radius: 10px;
+            padding: 120px 10px 10px;
+        }
+        &__title-small {
+            font-size: 0.9rem;
+        }
+    }
+}
